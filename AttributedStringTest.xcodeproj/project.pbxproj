@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A20780A2D19E3D000DE6658 /* AttributedString+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2078092D19E3D000DE6658 /* AttributedString+Color.swift */; };
+		3A20780A2D19E3D000DE6658 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2078092D19E3D000DE6658 /* Color.swift */; };
+		3A2078102D1E0D6D00DE6658 /* TextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20780F2D1E0D6D00DE6658 /* TextLayer.swift */; };
+		3A2078122D1E0DB600DE6658 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2078112D1E0DB600DE6658 /* NSAttributedStringExtension.swift */; };
 		3A2450AC2D0DB6350057664C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450AB2D0DB6350057664C /* AppDelegate.swift */; };
 		3A2450AE2D0DB6350057664C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450AD2D0DB6350057664C /* SceneDelegate.swift */; };
 		3A2450B52D0DB6360057664C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2450B42D0DB6360057664C /* Assets.xcassets */; };
@@ -16,12 +18,13 @@
 		3A2450C42D0DD54B0057664C /* ButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450C32D0DD54B0057664C /* ButtonContentView.swift */; };
 		3A2450C62D0DE73C0057664C /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450C52D0DE73C0057664C /* Attribute.swift */; };
 		3A2450C82D0DEBCE0057664C /* ASCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450C72D0DEBCE0057664C /* ASCollectionViewController.swift */; };
-		3A2450CC2D0F7E9E0057664C /* AttributedStringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450CB2D0F7E9E0057664C /* AttributedStringLabel.swift */; };
 		3A2450CE2D10A6CB0057664C /* ReusableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2450CD2D10A6CB0057664C /* ReusableTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A2078092D19E3D000DE6658 /* AttributedString+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Color.swift"; sourceTree = "<group>"; };
+		3A2078092D19E3D000DE6658 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3A20780F2D1E0D6D00DE6658 /* TextLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLayer.swift; sourceTree = "<group>"; };
+		3A2078112D1E0DB600DE6658 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		3A2450A82D0DB6350057664C /* AttributedStringTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttributedStringTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2450AB2D0DB6350057664C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2450AD2D0DB6350057664C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +35,6 @@
 		3A2450C32D0DD54B0057664C /* ButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentView.swift; sourceTree = "<group>"; };
 		3A2450C52D0DE73C0057664C /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		3A2450C72D0DEBCE0057664C /* ASCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCollectionViewController.swift; sourceTree = "<group>"; };
-		3A2450CB2D0F7E9E0057664C /* AttributedStringLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringLabel.swift; sourceTree = "<group>"; };
 		3A2450CD2D10A6CB0057664C /* ReusableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +68,6 @@
 		3A2450AA2D0DB6350057664C /* AttributedStringTest */ = {
 			isa = PBXGroup;
 			children = (
-				3A2450CB2D0F7E9E0057664C /* AttributedStringLabel.swift */,
 				3A2450AB2D0DB6350057664C /* AppDelegate.swift */,
 				3A2450AD2D0DB6350057664C /* SceneDelegate.swift */,
 				3A2450CF2D19D5F60057664C /* Models */,
@@ -75,7 +76,9 @@
 				3A2450B42D0DB6360057664C /* Assets.xcassets */,
 				3A2450B62D0DB6360057664C /* LaunchScreen.storyboard */,
 				3A2450B92D0DB6360057664C /* Info.plist */,
-				3A2078092D19E3D000DE6658 /* AttributedString+Color.swift */,
+				3A2078092D19E3D000DE6658 /* Color.swift */,
+				3A20780F2D1E0D6D00DE6658 /* TextLayer.swift */,
+				3A2078112D1E0DB600DE6658 /* NSAttributedStringExtension.swift */,
 			);
 			path = AttributedStringTest;
 			sourceTree = "<group>";
@@ -170,10 +173,11 @@
 			files = (
 				3A2450CE2D10A6CB0057664C /* ReusableTextView.swift in Sources */,
 				3A2450C62D0DE73C0057664C /* Attribute.swift in Sources */,
-				3A20780A2D19E3D000DE6658 /* AttributedString+Color.swift in Sources */,
+				3A20780A2D19E3D000DE6658 /* Color.swift in Sources */,
+				3A2078122D1E0DB600DE6658 /* NSAttributedStringExtension.swift in Sources */,
 				3A2450C82D0DEBCE0057664C /* ASCollectionViewController.swift in Sources */,
 				3A2450C02D0DB8270057664C /* AttributedText.swift in Sources */,
-				3A2450CC2D0F7E9E0057664C /* AttributedStringLabel.swift in Sources */,
+				3A2078102D1E0D6D00DE6658 /* TextLayer.swift in Sources */,
 				3A2450C42D0DD54B0057664C /* ButtonContentView.swift in Sources */,
 				3A2450AC2D0DB6350057664C /* AppDelegate.swift in Sources */,
 				3A2450AE2D0DB6350057664C /* SceneDelegate.swift in Sources */,
@@ -323,7 +327,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,7 +356,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

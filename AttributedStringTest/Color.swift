@@ -13,11 +13,10 @@ enum Color {
     case InActiveButton
     
     
-    
     var mainColor: UIColor {
         switch self {
         case .activeButton:
-            return UIColor(named: "activeColor") ?? .systemPink
+            return UIColor(resource: .active) ?? .systemPink//.red //UIColor(named: "activeColor") ?? .systemPink
         case .InActiveButton:
             return UIColor(named: "inactiveColor") ?? .systemPink
         }

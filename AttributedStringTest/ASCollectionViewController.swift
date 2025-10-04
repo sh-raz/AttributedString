@@ -22,7 +22,7 @@ class ASCollectionViewController: UICollectionViewController {
 //------------------------------------------------Initialisers
     init() {
         let layout = ASCollectionViewController.layout()
-        let firstText  = AttributedText()//AttributedText(text: NSMutableAttributedString(string: ""), attributes: [.bold(isActive: false),.color(isActive: false)])
+        let firstText  = AttributedText()
         text = firstText
         super.init(collectionViewLayout: layout)
     }
@@ -36,7 +36,7 @@ class ASCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        collectionView.frame =  CGRect(x: 10, y: 10, width: Int(view.frame.width - 20.0), height: Int(view.frame.height - 20.0))//= view.bounds
+        collectionView.frame = CGRect(x: 10, y: 10, width: Int(view.frame.width - 20.0), height: Int(view.frame.height - 20.0))
         collectionView.backgroundColor = UIColor(named: "BackgroundColor")
         
         
@@ -101,6 +101,7 @@ extension ASCollectionViewController{
         var snapshot = Snapshot()
         snapshot.appendSections([0])
         snapshot.appendItems(text.attributes)
+        print(text.attributes)
         dataSource.apply(snapshot)
     }
 }

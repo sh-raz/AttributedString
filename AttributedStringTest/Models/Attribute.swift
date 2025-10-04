@@ -10,6 +10,7 @@ import UIKit
 enum Attribute: Hashable {
     case bold(isActive: Bool)
     case color(isActive: Bool)
+    case animation(isActive: Bool)
     
     var name: String{
         switch self{
@@ -17,34 +18,36 @@ enum Attribute: Hashable {
             return "Bold"
         case .color:
             return "Color"
+        case .animation:
+            return "Animation"
         }
     }
     
-//    var attributedKey: NSAttributedString.Key {
-//        switch self{
-//        case .bold:
-//            return .font
-//        case .color:
-//            return .foregroundColor
-//        }
-//    }
+    //    var attributedKey: NSAttributedString.Key {
+    //        switch self{
+    //        case .bold:
+    //            return .font
+    //        case .color:
+    //            return .foregroundColor
+    //        }
+    //    }
     
-//    var attributedValue: Any {
-//        switch self{
-//        case .bold(let isActive):
-//            if isActive {
-//                return UIFont.boldSystemFont(ofSize: 10)
-//            }else{
-//                return UIFont.systemFont(ofSize: 15)
-//            }
-//        case .color(let isActive):
-//            if isActive {
-//                return UIColor.red
-//            }else{
-//                return UIColor.gray
-//            }
-//        }
-//    }
+    //    var attributedValue: Any {
+    //        switch self{
+    //        case .bold(let isActive):
+    //            if isActive {
+    //                return UIFont.boldSystemFont(ofSize: 10)
+    //            }else{
+    //                return UIFont.systemFont(ofSize: 15)
+    //            }
+    //        case .color(let isActive):
+    //            if isActive {
+    //                return UIColor.red
+    //            }else{
+    //                return UIColor.gray
+    //            }
+    //        }
+    //    }
     
 }
 

@@ -9,7 +9,7 @@ import UIKit
 
 class ButtonContentView: UIView, UIContentView {
     
-//ConfigurationStruct-----------------------------------------------------------------------------------------------------------------------------------------------------------
+//ConfigurationStruct-----------------------------------------------------------------------------------------------
     struct Configuration: UIContentConfiguration {
         var attribute: Attribute = .bold(isActive: false)
         var onChange: (Attribute) -> Void = { _ in }
@@ -38,12 +38,12 @@ class ButtonContentView: UIView, UIContentView {
     init(_ configuration: Configuration) {
         self.configuration = configuration
         super.init(frame: .zero)
+        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title2)//UIFont.systemFont(ofSize: 20, weight: .bold)
         button.layer.cornerRadius = 15
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didPressed(_:)), for: .touchUpInside)
         //button.layer.shadowColor = UIColor.gray.cgColor
         //button.layer.shadowOpacity = 4
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         addSubview(button)
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
@@ -62,15 +62,14 @@ class ButtonContentView: UIView, UIContentView {
         guard let configuration = configuration as? Configuration else { return }
         button.setTitle(configuration.attribute.name, for: .normal)
         button.layer.borderWidth = 4
-
+        
         switch configuration.attribute {
         case .bold(let isActive):
-            button.backgroundColor = isActive ? Color.activeButton.mainColor : Color.InActiveButton.mainColor
-            button.layer.borderColor =  isActive ? Color.activeButton.borderColor : Color.InActiveButton.borderColor
-
+            configureButtonColor(isActive)
         case .color(let isActive):
-            button.backgroundColor = isActive ? Color.activeButton.mainColor: Color.InActiveButton.mainColor
-            button.layer.borderColor =  isActive ? Color.activeButton.borderColor : Color.InActiveButton.borderColor
+            configureButtonColor(isActive)
+        case .animation(isActive: let isActive):
+            configureButtonColor(isActive)
         }
     }
     
@@ -82,8 +81,16 @@ class ButtonContentView: UIView, UIContentView {
             configuration.attribute = .bold(isActive: !isActive)
         case .color(let isActive):
             configuration.attribute = .color(isActive: !isActive)
+        case .animation(isActive: let isActive):
+            configuration.attribute = .animation(isActive: !isActive)
         }
         configuration.onChange(configuration.attribute)
+    }
+    
+    
+    func configureButtonColor(_ isActive: Bool){
+        button.backgroundColor = isActive ? Color.activeButton.mainColor : Color.InActiveButton.mainColor
+        button.layer.borderColor =  isActive ? Color.activeButton.borderColor : Color.InActiveButton.borderColor
     }
 }
 

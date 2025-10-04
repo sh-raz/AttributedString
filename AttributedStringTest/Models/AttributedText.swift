@@ -12,7 +12,7 @@ struct AttributedText{
     var attributes: [Attribute] //= [.bold(isActive: false), .color(isActive: false)]
     
     init(text: NSMutableAttributedString = NSMutableAttributedString(string: "This is test text inside AttributedText struct."),
-         attributes: [Attribute] = [.bold(isActive: false), .color(isActive: false)]) {
+         attributes: [Attribute] = [.bold(isActive: false), .color(isActive: false), .animation(isActive: false)]) {
         self.text = text
         self.attributes = attributes
     }
@@ -29,7 +29,6 @@ struct AttributedText{
                     attributesDic[.font] = boldFont
                 } else {
                     let normalFont = UIFont.preferredFont(forTextStyle: .body)
-                
                     attributesDic[.font] = normalFont
                 }
             case .color(let isActive):
@@ -40,18 +39,12 @@ struct AttributedText{
                     let normalColor = UIColor.black
                     attributesDic[.foregroundColor] = normalColor
                 }
+            case .animation(let isActive):
+                attributesDic[.customAnimation] = isActive
             }
             
         }
     return attributesDic
 }
 
-//    mutating func updateProperty(name: String, active: Bool){
-//        switch name {
-//        case "bold": bold = active
-//            
-//        default:
-//            <#code#>
-//        }
-//    }
 }
