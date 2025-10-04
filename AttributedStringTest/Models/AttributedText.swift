@@ -11,7 +11,7 @@ struct AttributedText{
     var text: NSMutableAttributedString //= NSMutableAttributedString(string: "This is test text inside AttributedText struct.")
     var attributes: [Attribute] //= [.bold(isActive: false), .color(isActive: false)]
     
-    init(text: NSMutableAttributedString = NSMutableAttributedString(string: "This is test text inside AttributedText struct."),
+    init(text: NSMutableAttributedString = NSMutableAttributedString(string: "The only way to do great work is to love what you do. — Steve Jobs"),
          attributes: [Attribute] = [.bold(isActive: false), .color(isActive: false), .animation(isActive: false)]) {
         self.text = text
         self.attributes = attributes

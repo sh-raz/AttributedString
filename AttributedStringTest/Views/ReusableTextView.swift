@@ -67,7 +67,7 @@ class ReusableTextView: UICollectionReusableView {
     func updateUI(){
         let attributesDic = attributedText.attributedKey()
        
-        var attributedString = attributedText.text//NSMutableAttributedString(string:  "This is a test text.")
+        var attributedString = attributedText.text
         attributedString.addAttributes(attributesDic, range: NSRange(location: 0, length: attributedString.length) )
         textView.attributedText = attributedString
         
